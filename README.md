@@ -1,241 +1,239 @@
 # Street Fighter
 
-You can access the hosted version of the Street Fighter game by following this link: [Street Fighter Game](https://streetfighterbymayank.netlify.app/)
+Puedes acceder a la versión del juego en línea a través del siguiente enlace: [Juego Street Fighter](https://streetfighterbymayank.netlify.app/)
 
-This hosted version allows you to play the game directly in your web browser without the need for any downloads or installations. Experience the excitement of classic arcade-style fighting gameplay right from your device!!
+Esta versión en línea te permite jugar directamente en tu navegador web sin necesidad de descargas ni instalaciones. ¡Disfruta la emoción de las peleas clásicas estilo arcade directamente desde tu dispositivo!
 
 <img src="public/images/gameplay.png" alt="Gameplay" width="390" height="240">
 
-## Project Overview
+## Descripción General del Proyecto
 
-This project is a simple Street Fighter game implemented using JavaScript and HTML5 canvas. It features classic characters like Ryu and Ken, along with various sound effects and stages.
+Este proyecto es un juego simple de Street Fighter desarrollado con JavaScript y el canvas de HTML5. Cuenta con personajes clásicos como Ryu y Ken, además de diversos efectos de sonido y escenarios.
 
-## Game Controls
+## Controles del Juego
 
-The game controls are as follows:
+Los controles del juego son los siguientes:
 
-![Controls](public/images/Controls.png)
+![Controles](public/images/Controls.png)
 
-### Player 1:
+### Jugador 1:
 
-- **Movement**:
+- **Movimiento**:
+  - Teclado: Teclas de dirección (Izquierda, Derecha, Arriba, Abajo)
+  - Mando / Gamepad: Palanca izquierda (Thumbstick)
 
-  - Keyboard: Arrow keys (Left, Right, Up, Down)
-  - Gamepad: Left thumbstick
+- **Ataques**:
+  - Puño Débil: Q (Teclado) / X (Mando)
+  - Puño Medio: E (Teclado) / Cuadrado (Mando)
+  - Puño Fuerte: R (Teclado) / L1 (Mando)
+  - Patada Débil: F (Teclado) / Círculo (Mando)
+  - Patada Media: V (Teclado) / Triángulo (Mando)
+  - Patada Fuerte: G (Teclado) / R1 (Mando)
 
-- **Attacks**:
-  - Light Punch: Q (Keyboard) / X (Gamepad)
-  - Medium Punch: E (Keyboard) / Square (Gamepad)
-  - Heavy Punch: R (Keyboard) / L1 (Gamepad)
-  - Light Kick: F (Keyboard) / O (Gamepad)
-  - Medium Kick: V (Keyboard) / Triangle (Gamepad)
-  - Heavy Kick: G (Keyboard) / R1 (Gamepad)
+### Jugador 2:
 
-### Player 2:
+- **Movimiento**:
+  - Teclado: Teclas WASD (W para Arriba)
+  - Mando / Gamepad: Palanca izquierda (Thumbstick)
 
-- **Movement**:
+- **Ataques**:
+  - Puño Débil: Barra diagonal / Slash (Teclado) / X (Mando)
+  - Puño Medio: Control Derecho / ControlRight (Teclado) / Cuadrado (Mando)
+  - Puño Fuerte: Punto (Teclado) / L1 (Mando)
+  - Patada Débil: Shift Derecho / ShiftRight (Teclado) / Círculo (Mando)
+  - Patada Media: Comilla / Quote (Teclado) / Triángulo (Mando)
+  - Patada Fuerte: Enter (Teclado) / R1 (Mando)
 
-  - Keyboard: WASD keys (W for Up)
-  - Gamepad: Left thumbstick
+Toma en cuenta que en la configuración de mandos, la palanca izquierda también funciona para controlar el movimiento.
 
-- **Attacks**:
-  - Light Punch: Slash (Keyboard) / X (Gamepad)
-  - Medium Punch: ControlRight (Keyboard) / Square (Gamepad)
-  - Heavy Punch: Period (Keyboard) / L1 (Gamepad)
-  - Light Kick: ShiftRight (Keyboard) / O (Gamepad)
-  - Medium Kick: Quote (Keyboard) / Triangle (Gamepad)
-  - Heavy Kick: Enter (Keyboard) / R1 (Gamepad)
+## Cómo Empezar
 
-Please note that for gamepad controls, the controller left thumbstick also works as movement input.
+Para comenzar a usar este proyecto, sigue estos pasos:
 
-## Getting Started
-
-To get started with the project, follow these steps:
-
-1. Clone the repository:
-   ```
+1. Clona el repositorio:
+   ```bash
    git clone https://github.com/Mayank-Jain-1/StreetFighter
    ```
-2. Open `index.html` in your preferred web browser.
+2. Abre el archivo `index.html` en tu navegador web preferido.
 
-That's it! You should now be able to play the Street Fighter game in your browser.
+¡Y eso es todo! Ya deberías poder jugar Street Fighter directamente en tu navegador.
 
 ---
 
-## Understanding Game Logic
+## Entendiendo la Lógica del Juego
 
 1. ### BattleScene.js
 
-The `BattleScene.js` file contains the implementation of the `BattleScene` class, which represents the scene where the battle between fighters takes place in the game. This class handles various aspects of the battle scene, including fighter management, camera control, animation, and game state.
+El archivo `BattleScene.js` contiene la implementación de la clase `BattleScene`, la cual representa la escena donde se lleva a cabo el combate entre los peleadores. Esta clase gestiona varios aspectos de la escena de pelea, incluyendo el manejo de los peleadores, el control de la cámara, la animación y el estado general del juego.
 
-#### Overview
+#### Descripción General
 
-- **Fighter Management**: Manages the initialization, update, and rendering of fighter entities in the battle scene. It handles player input, fighter interactions, and state transitions during battles.
+- **Gestión de Peleadores**: Administra la inicialización, actualización y renderizado de las entidades de los peleadores en la escena de batalla. Procesa los comandos del jugador, las interacciones entre peleadores y las transiciones de estado durante la pelea.
 
-- **Camera Control**: Controls the camera movement and focus within the battle scene to ensure that both fighters remain within view during gameplay. It provides smooth camera transitions and follows the fighters' movements.
+- **Control de Cámara**: Controla el movimiento y enfoque de la cámara dentro de la escena para asegurar que ambos peleadores permanezcan visibles durante la partida. Proporciona transiciones de cámara fluidas y sigue los movimientos de los peleadores.
 
-- **Animation and Effects**: Handles fighter animations, hit effects, and other visual elements such as shadows and overlays to provide a dynamic and engaging battle experience for players.
+- **Animación y Efectos**: Controla las animaciones de los peleadores, efectos de impacto y otros elementos visuales como sombras y superposiciones (overlays) para ofrecer una experiencia de batalla dinámica e interactiva.
 
-- **Game State Management**: Manages the overall game state, including fighter hit points, victory conditions, and transitions between scenes such as the start scene and end scene.
+- **Gestión del Estado del Juego**: Controla el estado general del juego, incluyendo los puntos de vida de los peleadores, las condiciones de victoria y las transiciones entre escenas (como la pantalla de inicio y de fin de juego).
 
-#### Key Components
+#### Componentes Clave
 
-- **Fighter Entities**: Initializes and manages fighter entities based on player selection and game state. It handles fighter animations, attacks, collisions, and interactions with the environment.
+- **Entidades de Peleadores**: Inicializa y gestiona las entidades de los peleadores según la selección del jugador y el estado del juego. Controla sus animaciones, ataques, colisiones e interacciones con el entorno.
 
-- **Camera**: Controls the camera position and movement to keep both fighters in view during battles. It allows smooth tracking of fighter movements and provides a dynamic viewing experience.
+- **Cámara**: Controla la posición y el movimiento de la cámara para mantener a ambos peleadores en pantalla durante las peleas. Permite un seguimiento fluido de sus movimientos para una vista más dinámica.
 
-- **Hit Effects**: Manages hit effects such as splashes and screen shake to provide visual feedback when fighters land attacks or take damage during battles.
+- **Efectos de Impacto**: Gestiona efectos como destellos/salpicaduras y temblor de pantalla para dar retroalimentación visual cuando un peleador conecta un golpe o recibe daño.
 
-- **Game State**: Tracks the game state, including fighter hit points, victory conditions, and scene transitions. It ensures consistent gameplay logic and progression throughout the battle scene.
+- **Estado del Juego**: Rastrea el estado de la partida, incluyendo puntos de vida, condiciones de victoria y cambios de escena. Asegura una lógica de juego constante a lo largo de la pelea.
 
-#### Usage
+#### Modo de Uso
 
-To use the `BattleScene` class in your game:
+Para usar la clase `BattleScene` en tu juego:
 
-1. Import the `BattleScene` class from the `BattleScene.js` file.
-2. Initialize an instance of the `BattleScene` class within your game's scene management system.
-3. Integrate player input handling to control fighter actions and movements during battles.
-4. Implement collision detection and hit detection to determine the outcome of attacks and interactions between fighters.
-5. Customize the battle scene's visual effects, camera behavior, and game state management to fit your game's specific requirements and mechanics.
+1. Importa la clase `BattleScene` desde el archivo `BattleScene.js`.
+2. Inicializa una instancia de la clase `BattleScene` dentro del sistema de gestión de escenas de tu juego.
+3. Integra la lectura de comandos de los jugadores para controlar las acciones y movimientos de los peleadores.
+4. Implementa la detección de colisiones e impactos para determinar el resultado de los ataques e interacciones.
+5. Personaliza los efectos visuales, el comportamiento de la cámara y la gestión del estado según los requerimientos y mecánicas de tu proyecto.
 
-#### Example
+#### Ejemplo
 
 ```javascript
 import { BattleScene } from './BattleScene.js';
 
-// Initialize the battle scene
+// Inicializar la escena de batalla
 const battleScene = new BattleScene(changeScene);
 
-// Main game loop
+// Bucle principal del juego (Game Loop)
 function gameLoop() {
-	// Update the battle scene
+	// Actualizar la escena de batalla
 	battleScene.update(time);
 
-	// Draw the battle scene
+	// Dibujar la escena de batalla
 	battleScene.draw(context);
 }
 ```
 
-#### Notes
+#### Notas
 
-- Ensure that the `BattleScene` class is properly integrated into your game's scene management system and updated/rendered within the main game loop.
-- Customize the `BattleScene` class as needed to add new features, optimize performance, and enhance the overall gameplay experience.
-- Refer to the comments and documentation within the `BattleScene.js` file for detailed explanations of class methods, properties, and usage guidelines.
+- Asegúrate de integrar correctamente la clase `BattleScene` dentro del sistema de gestión de escenas de tu juego y de actualizarla/renderizarla dentro del bucle principal.
+- Personaliza la clase `BattleScene` según sea necesario para agregar nuevas funciones, optimizar el rendimiento y mejorar la experiencia de juego.
+- Consulta los comentarios y la documentación dentro de `BattleScene.js` para ver explicaciones detalladas sobre sus métodos, propiedades y guías de uso.
 
 ---
 
 2. ### Fighter.js
 
-This file contains the implementation of the `Fighter` class, which represents a fighter character in the game. The class handles various aspects of the fighter's behavior, including movement, attacks, collisions, animations, and state transitions.
+Este archivo contiene la implementación de la clase `Fighter`, la cual representa a un personaje peleador en el juego. La clase maneja varios aspectos de su comportamiento, incluyendo movimiento, ataques, colisiones, animaciones y transiciones de estado.
 
-#### Overview
+#### Descripción General
 
-- **Input Handling**: The fighter class listens for player input using an input handler and responds accordingly to trigger different actions such as movement, jumping, crouching, and attacking.
+- **Manejo de Comandos**: La clase del peleador escucha las acciones del jugador a través de un manejador de entradas (input handler) y responde en consecuencia ejecutando acciones como moverse, saltar, agacharse y atacar.
 
-- **Animation**: It manages the fighter's animations, including transitioning between different animation states such as idle, walking, jumping, and attacking. Animation frames are handled based on predefined timings and states.
+- **Animación**: Administra las animaciones del peleador, incluyendo las transiciones entre estados como reposo (idle), caminar, saltar y atacar. Los fotogramas de animación se gestionan en base a tiempos y estados predefinidos.
 
-- **Collision Detection**: The fighter class detects collisions with the opponent fighter to determine whether attacks land successfully or whether fighters collide during movement.
+- **Detección de Colisiones**: Detecta las colisiones con el peleador oponente para determinar si los ataques conectan con éxito o si los personajes chocan al moverse.
 
-- **State Management**: It maintains the state of the fighter, which determines its current behavior and actions. States include idle, walking, jumping, crouching, and various attack states with different attack strengths.
+- **Gestión de Estados**: Mantiene el estado actual del peleador, lo que determina su comportamiento y acciones en cada momento. Los estados incluyen reposo, caminar, saltar, agacharse y varios estados de ataque con diferentes niveles de intensidad.
 
-- **Sound Effects**: The class handles playing sound effects for attacks, hits, and landing actions to provide audio feedback during gameplay.
+- **Efectos de Sonido**: La clase se encarga de reproducir los efectos de sonido de ataques, golpes y caídas para brindar retroalimentación auditiva durante la partida.
 
-#### Key Components
+#### Componentes Clave
 
-- **Velocity and Position**: Tracks the fighter's velocity and position in the game world, allowing smooth movement and interaction with the environment and other fighters.
+- **Velocidad y Posición**: Rastrea la velocidad y posición del peleador en el mundo del juego, permitiendo un movimiento fluido e interacción con el entorno y otros personajes.
 
-- **Animation Handling**: Manages animation frames and timing, ensuring smooth transitions between different animation states and providing visual feedback to players.
+- **Manejo de Animaciones**: Gestiona los fotogramas y tiempos de animación, garantizando transiciones suaves entre estados y ofreciendo respuestas visuales claras al jugador.
 
-- **Attack Detection**: Detects successful attacks on the opponent fighter based on collision detection and triggers appropriate hit effects and damage calculations.
+- **Detección de Ataques**: Detecta si un ataque hacia el oponente fue exitoso mediante la comprobación de colisiones, activando los efectos de impacto y cálculos de daño correspondientes.
 
-- **State Transitions**: Handles transitions between different states based on player input, game events, and predefined conditions, ensuring responsive and dynamic fighter behavior.
+- **Transiciones de Estado**: Controla los cambios de estado según las entradas del jugador, eventos del juego y condiciones predefinidas, garantizando un comportamiento reactivo y dinámico del peleador.
 
-- **Collision Detection**: Detects collisions between fighters and the environment, including stage boundaries and other game objects, to prevent clipping and ensure fair gameplay.
+- **Detección de Colisiones**: Detecta colisiones entre los peleadores y el entorno (como los límites del escenario) para evitar atravesar objetos y asegurar un juego justo.
 
-#### Usage
+#### Modo de Uso
 
-To use the `Fighter` class in your game:
+Para usar la clase `Fighter` en tu juego:
 
-1. Import the `Fighter` class from the `Fighter.js` file.
-2. Initialize instances of the `Fighter` class for each player character in your game.
-3. Implement input handling to control the fighters' actions, such as movement and attacks.
-4. Integrate collision detection to determine the outcome of attacks and interactions between fighters.
-5. Manage animations and state transitions to provide visual feedback and create engaging gameplay experiences.
+1. Importa la clase `Fighter` desde el archivo `Fighter.js`.
+2. Inicializa instancias de la clase `Fighter` para cada personaje jugable.
+3. Implementa el control de comandos para gestionar las acciones del peleador.
+4. Integra la detección de colisiones para determinar el impacto de los ataques e interacciones.
+5. Gestiona las animaciones y estados para ofrecer retroalimentación visual y crear una jugabilidad atractiva.
 
-#### Example
+#### Ejemplo
 
 ```javascript
 import { Fighter } from './Fighter.js';
 
-// Initialize player 1 fighter
+// Inicializar peleador del Jugador 1
 const player1Fighter = new Fighter(player1Id, onAttackHit, entityList);
 
-// Initialize player 2 fighter
+// Inicializar peleador del Jugador 2
 const player2Fighter = new Fighter(player2Id, onAttackHit, entityList);
 
-// Main game loop
+// Bucle principal del juego (Game Loop)
 function gameLoop() {
-	// Update player 1 fighter
+	// Actualizar peleador del Jugador 1
 	player1Fighter.update(time, camera);
 
-	// Update player 2 fighter
+	// Actualizar peleador del Jugador 2
 	player2Fighter.update(time, camera);
 
-	// Render fighters
+	// Renderizar peleadores
 	player1Fighter.draw(context, camera);
 	player2Fighter.draw(context, camera);
 }
 ```
 
-#### Notes
+#### Notas
 
-- Ensure that the `Fighter` class is instantiated and updated within your game loop to maintain proper functionality and synchronization with the game state.
-- Customize the `Fighter` class as needed to fit the specific requirements and mechanics of your game, including adding new states, actions, and animations.
+- Asegúrate de instanciar y actualizar la clase `Fighter` dentro del bucle principal de tu juego para mantener el funcionamiento correcto y la sincronización con el estado global.
+- Personaliza la clase `Fighter` según lo requiera tu juego, ya sea añadiendo nuevos estados, acciones o animaciones.
 
-For more details on the implementation and usage of the `Fighter` class, refer to the comments and documentation within the `Fighter.js` file.
+Para obtener más información sobre la implementación y el uso de la clase `Fighter`, consulta los comentarios dentro del archivo `Fighter.js`.
 
 ---
 
 3. ### ControlHistory.js
 
-The `ControlHistory.js` file implements the `ControlHistory` class, which manages the history of player controls during gameplay. It tracks the sequence of button inputs and moves made by the player and provides functionality to detect special moves based on predefined sequences.
+El archivo `ControlHistory.js` implementa la clase `ControlHistory`, la cual gestiona el historial de comandos ejecutados por el jugador durante la partida. Rastrea la secuencia de botones y movimientos de dirección ingresados por el usuario para detectar movimientos especiales basados en secuencias predefinidas.
 
-#### Overview
+#### Descripción General
 
-- **Control Tracking**: Tracks the history of player controls, including button inputs and directional movements, to detect special move sequences during gameplay.
+- **Rastreo de Comandos**: Registra el historial de comandos del jugador (botones y direcciones) para identificar combos y ataques especiales en tiempo real.
 
-- **Button Mapping**: Maps player controls to specific button inputs and directional movements defined in the game's configuration settings.
+- **Mapeo de Botones**: Asocia los controles del jugador a entradas de botones y direcciones específicas definidas en los ajustes de configuración del juego.
 
-- **Special Move Detection**: Detects special moves performed by the player based on predefined sequences of button inputs and directional movements. It triggers state changes for fighters when special moves are successfully executed.
+- **Detección de Movimientos Especiales**: Detecta ataques especiales ejecutados por el jugador al coincidir las secuencias ingresadas con las preestablecidas. Cambia el estado del peleador cuando se realiza una combinación con éxito.
 
-#### Key Components
+#### Componentes Clave
 
-- **History Management**: Manages the history of player controls as an array of control events, including button presses and directional movements. It handles additions and removals from the history based on time constraints and polling intervals.
+- **Gestión del Historial**: Mantiene el registro de comandos como una lista de eventos, manejando la adición y eliminación de entradas en función de límites de tiempo y frecuencias de muestreo.
 
-- **Button Mapping**: Maps control functions to specific button inputs and directional movements defined in the game's configuration settings. It provides a flexible mechanism for associating player controls with in-game actions.
+- **Mapeo de Botones**: Mapea funciones del juego a botones específicos, ofreciendo flexibilidad para configurar los controles a distintas acciones.
 
-- **Special Move Detection**: Detects special move sequences performed by the player by matching the current control history against predefined sequences associated with each special move. It triggers state changes for fighters when valid move sequences are detected.
+- **Detección de Movimientos Especiales**: Compara el historial reciente de comandos con secuencias predefinidas. Cuando detecta un combo válido, activa el estado especial correspondiente en el peleador.
 
-#### Usage
+#### Modo de Uso
 
-To use the `ControlHistory` class in your game:
+Para usar la clase `ControlHistory` en tu juego:
 
-1. Import the `ControlHistory` class from the `ControlHistory.js` file.
-2. Initialize an instance of the `ControlHistory` class for each player character in your game.
-3. Integrate control handling to capture player input and update the control history during gameplay.
-4. Implement special move detection logic to check for valid move sequences and trigger state changes for fighters accordingly.
+1. Importa la clase `ControlHistory` desde el archivo `ControlHistory.js`.
+2. Inicializa una instancia de `ControlHistory` para cada peleador.
+3. Integra la captura de comandos para registrar las entradas del jugador durante el juego.
+4. Implementa la lógica de detección de movimientos especiales para validar las secuencias y activar los cambios de estado requeridos.
 
-#### Example
+#### Ejemplo
 
 ```javascript
 import { ControlHistory } from './ControlHistory.js';
 
-// Initialize control history for a fighter
+// Inicializar el historial de controles para un peleador
 const controlHistory = new ControlHistory(fighter);
 
-// Main game loop
+// Bucle principal del juego (Game Loop)
 function gameLoop() {
-	// Update control history
+	// Actualizar el historial de controles
 	controlHistory.update(time);
 }
 ```
@@ -244,91 +242,85 @@ function gameLoop() {
 
 4. ### Camera.js
 
-The `Camera.js` file implements the `Camera` class, which represents the viewport camera used to control the visible area of the game scene. It dynamically adjusts its position based on the movement and positions of the fighters to ensure that they remain in view during gameplay.
+El archivo `Camera.js` implementa la clase `Camera`, que representa la cámara del área de visión (viewport) utilizada para controlar qué parte del escenario se muestra en pantalla. Ajusta dinámicamente su posición según la distancia y movimiento de los peleadores para no perderlos de vista.
 
-#### Overview
+#### Descripción General
 
-- **Viewport Control**: Manages the position of the camera within the game scene to control the visible area displayed to the player. It adjusts its position based on the movement and positions of the fighters to keep them within view.
+- **Control de Viewport**: Administra la posición de la cámara dentro del mapa para mostrar la sección adecuada al jugador. Se ajusta en tiempo real según la ubicación de ambos combatientes.
 
-- **Scrolling Behavior**: Implements scrolling behavior to follow the fighters horizontally and vertically as they move within the game stage. It ensures that the camera smoothly tracks the fighters' movements while preventing them from moving out of view.
+- **Comportamiento de Desplazamiento (Scrolling)**: Desplaza la vista horizontal y verticalmente al ritmo de los personajes mientras se mueven por el escenario, logrando un seguimiento fluido sin salir de los límites visibles.
 
-#### Key Components
+#### Componentes Clave
 
-- **Position Management**: Tracks the position of the camera within the game scene using x and y coordinates. It updates its position dynamically based on the movement and positions of the fighters to keep them centered within the viewport.
+- **Gestión de Posición**: Mantiene las coordenadas X e Y de la cámara y las actualiza para mantener el encuadre centrado entre ambos peleadores.
 
-- **Scrolling Logic**: Implements scrolling logic to adjust the camera's position horizontally and vertically based on the fighters' movements. It ensures that the camera follows the fighters smoothly while maintaining a suitable view of the game scene.
+- **Lógica de Desplazamiento**: Ajusta el enfoque de la cámara para seguir suavemente el movimiento de los personajes y ofrecer la mejor perspectiva posible del combate.
 
-- **Boundary Constraints**: Enforces boundary constraints to prevent the camera from moving beyond the edges of the game stage. It ensures that the camera stays within the bounds of the stage to maintain a coherent view of the gameplay area.
+- **Límites de Escenario**: Aplica restricciones para evitar que la cámara muestre áreas fuera del escenario o mapa de juego.
 
-#### Usage
+#### Modo de Uso
 
-To use the `Camera` class in your game:
+Para usar la clase `Camera` en tu juego:
 
-1. Import the `Camera` class from the `Camera.js` file.
-2. Initialize an instance of the `Camera` class with initial x and y coordinates and a reference to the fighters array.
-3. Integrate camera updating logic within your game loop to ensure that the camera's position is updated dynamically based on the fighters' movements.
+1. Importa la clase `Camera` desde el archivo `Camera.js`.
+2. Inicializa una instancia de `Camera` pasando sus coordenadas iniciales y la referencia al arreglo de peleadores.
+3. Incluye la actualización de la cámara dentro del bucle de tu juego para mantener la sincronización con el movimiento de los personajes.
 
-#### Example
+#### Ejemplo
 
 ```javascript
 import { Camera } from './Camera.js';
 
-// Initialize camera with initial position and fighters array
+// Inicializar la cámara con su posición inicial y el arreglo de peleadores
 const camera = new Camera(initialX, initialY, fighters);
 
-// Main game loop
+// Bucle principal del juego (Game Loop)
 function gameLoop() {
-	// Update camera position
+	// Actualizar la posición de la cámara
 	camera.update(time, context);
 }
 ```
 
-#### Notes
+#### Notas
 
-- Customize the `Camera` class as needed to support additional features such as zooming, camera effects, and dynamic viewport resizing.
-- Ensure that the camera updating logic is executed within the main game loop to maintain real-time synchronization with the game state and player actions.
-- Refer to the comments and documentation within the `Camera.js` file for detailed explanations of class methods, properties, and usage guidelines.
-
-#### Notes
-
-- Customize the `ControlHistory` class as needed to support additional control mappings, special move sequences, and gameplay mechanics specific to your game.
-- Ensure that the control history is updated within the main game loop to maintain accurate tracking of player input and enable real-time detection of special moves.
-- Refer to the comments and documentation within the `ControlHistory.js` file for detailed explanations of class methods, properties, and usage guidelines.
-
-## Resources Used for Game Development
-
-During the development of the game, the following websites and applications were utilized for creating and editing sprites, as well as obtaining sounds:
-
-1. **GraphicsGale**:
-
-   - **Description**: GraphicsGale is a versatile graphics editor primarily used for creating and editing sprites, animations, and pixel art.
-   - **Usage**: GraphicsGale was used extensively throughout the development process for designing and refining sprite graphics, including character animations, backgrounds, and visual effects.
-
-2. **The Spriters Resource** (https://www.spriters-resource.com/):
-
-   - **Description**: The Spriters Resource is an online repository of sprite sheets, game graphics, and artwork sourced from various video games across different platforms.
-   - **Usage**: The Spriters Resource served as a valuable resource for obtaining sprite sheets and game graphics to use in the game development process. It provided a wide range of sprites for characters, objects, and environments, which were incorporated into the game with appropriate modifications.
-
-3. **The Sounds Resource** (https://www.sounds-resource.com/):
-   - **Description**: The Sounds Resource is an online platform offering a vast collection of video game sounds, music tracks, and audio clips extracted from numerous video games.
-   - **Usage**: The Sounds Resource was utilized to acquire sound effects, background music, and other audio assets to enhance the auditory experience of the game. It provided access to a diverse selection of sounds suitable for various in-game actions, events, and interactions.
-  
-4. **Youtube Referene** (https://www.youtube.com/@shezzor):
-    - Huge shoutout to @shezzor whose youtube playlist for this js development to which i refered to for learning.  
-
-By leveraging these resources, the game development process was enriched with high-quality graphics and audio elements, contributing to the overall immersion and enjoyment of the gaming experience.
-
-## Interesting Community Forks to checkout
-1. @vm10k - https://github.com/vm10k/SFA-Multiplayer
-
-## Contributing
-
-If you would like to contribute to the project, feel free to open an issue or submit a pull request. Any contributions are welcome!
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+- Personaliza la clase `Camera` si necesitas añadir funciones como zoom, efectos de sacudida o redimensionamiento dinámico de pantalla.
+- Asegúrate de actualizar la cámara en el bucle principal del juego para garantizar una respuesta fluida en tiempo real.
+- Consulta las explicaciones adicionales dentro del archivo `Camera.js` para conocer más detalles sobre sus métodos y propiedades.
 
 ---
 
-Feel free to update this README as the project progresses!
+## Recursos Utilizados para el Desarrollo del Juego
+
+Durante la creación del juego se utilizaron los siguientes sitios web y herramientas para la creación, edición de sprites y obtención de audio:
+
+1. **GraphicsGale**:
+   - **Descripción**: Editor gráfico versátil enfocado principalmente en la creación y edición de sprites, animaciones y pixel art.
+   - **Uso**: Se usó ampliamente a lo largo del desarrollo para diseñar y detallar los gráficos de los sprites, animaciones de personajes, fondos y efectos visuales.
+
+2. **The Spriters Resource** (https://www.spriters-resource.com/):
+   - **Descripción**: Biblioteca en línea de hojas de sprites (sprite sheets), gráficos y recursos de arte extraídos de diversos videojuegos.
+   - **Uso**: Sirvió como una fuente clave para obtener hojas de sprites y gráficos que se adaptaron e integraron en las mecánicas del juego.
+
+3. **The Sounds Resource** (https://www.sounds-resource.com/):
+   - **Descripción**: Plataforma con una colección masiva de efectos de sonido, pistas de música y clips de audio de diversos títulos.
+   - **Uso**: Se utilizó para obtener los efectos de sonido, música de fondo y otros elementos de audio para enriquecer la experiencia sonora de las batallas.
+
+4. **Referencia de YouTube** (https://www.youtube.com/@shezzor):
+   - Agradecimiento especial a @shezzor, cuya lista de reproducción en YouTube sobre desarrollo en JS sirvió como excelente guía de aprendizaje para este proyecto.
+
+Gracias al uso de estos recursos, el proyecto cuenta con un apartado visual y sonoro de gran calidad, logrando una experiencia de juego más inmersiva.
+
+## Forks Interesantes de la Comunidad para Revisar
+1. @vm10k - https://github.com/vm10k/SFA-Multiplayer
+
+## Contribuciones
+
+Si te interesa contribuir a este proyecto, siéntete libre de abrir un *issue* o enviar un *pull request*. ¡Cualquier aportación es bienvenida!
+
+## Licencia
+
+Este proyecto se encuentra bajo la [Licencia MIT](LICENSE).
+
+---
+
+¡Siéntete libre de actualizar este README conforme el proyecto siga evolucionando!
