@@ -305,13 +305,11 @@ Durante la creación del juego se utilizaron los siguientes sitios web y herrami
    - **Descripción**: Plataforma con una colección masiva de efectos de sonido, pistas de música y clips de audio de diversos títulos.
    - **Uso**: Se utilizó para obtener los efectos de sonido, música de fondo y otros elementos de audio para enriquecer la experiencia sonora de las batallas.
 
-4. **Referencia de YouTube** (https://www.youtube.com/@shezzor):
-   - Agradecimiento especial a @shezzor, cuya lista de reproducción en YouTube sobre desarrollo en JS sirvió como excelente guía de aprendizaje para este proyecto.
+
 
 Gracias al uso de estos recursos, el proyecto cuenta con un apartado visual y sonoro de gran calidad, logrando una experiencia de juego más inmersiva.
 
-## Forks Interesantes de la Comunidad para Revisar
-1. @vm10k - https://github.com/vm10k/SFA-Multiplayer
+
 
 ## Contribuciones
 
