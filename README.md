@@ -4,7 +4,7 @@ Puedes acceder a la versión del juego en línea a través del siguiente enlace:
 
 Esta versión en línea te permite jugar directamente en tu navegador web sin necesidad de descargas ni instalaciones. ¡Disfruta la emoción de las peleas clásicas estilo arcade directamente desde tu dispositivo!
 
-<img src="public/images/gameplay.png" alt="Gameplay" width="390" height="240">
+<img src="public/images/gameplay___.png" alt="Gameplay" width="390" height="240">
 
 ## Descripción General del Proyecto
 
