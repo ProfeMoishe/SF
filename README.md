@@ -1,6 +1,6 @@
 # Street Fighter
 
-Puedes acceder a la versión del juego en línea a través del siguiente enlace: [Juego Street Fighter](https://streetfighterbymayank.netlify.app/)
+Puedes acceder a la versión del juego en línea a través del siguiente enlace: [Juego Street Fighter](https://profemoishe.github.io/SF/))
 
 Esta versión en línea te permite jugar directamente en tu navegador web sin necesidad de descargas ni instalaciones. ¡Disfruta la emoción de las peleas clásicas estilo arcade directamente desde tu dispositivo!
 
